@@ -11,14 +11,13 @@ seed_commands = AppGroup('seed')
 
 @seed_commands.command('all')
 def seed():
-    seed_users()
     seed_cards()
     # Add other seed functions here
 
 # Creates the `flask seed undo` command
 
 
-@seed_commands.command('undo')
-def undo():
-    undo_users()
+# @seed_commands.command('undo')
+# def undo():
+#     undo_users()
     # Add other undo functions here

@@ -21,8 +21,3 @@ cards = getCardData(major)
 # tarot card object for each one:
 major_arcana = [TarotCard(card['id'], card['name'], card['img'],
                           card['query'], 'major') for card in cards]
-print(major_arcana)
-# major_card = major_arcana[0]
-# print(major_card.name)
-# print(major_card.img)
-# print(getImgData(major))
