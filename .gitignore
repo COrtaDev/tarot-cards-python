@@ -1,5 +1,5 @@
 .env
-/react-app/.env.example
+/react-app/.env
 .venv
 
 /react-app/node_modules
