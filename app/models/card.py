@@ -8,7 +8,7 @@ class Card(db.Model):
     deck = db.Column(db.String(5), nullable=False)
     name = db.Column(db.String(40), nullable=False, unique=True)
     img = db.Column(db.String(255), nullable=False, unique=True)
-    query = db.Column(db.String(60), nullable=False, unique=True)
+    api_endpoint = db.Column(db.String(60), nullable=False, unique=True)
     # description = db.Column(db.Text, nullable=False)
     # upKWs = db.Column(db.String(255), nullable=False)
     # revKWs = db.Column(db.String(255), nullable=False)
@@ -21,7 +21,7 @@ class Card(db.Model):
             'deck': self.deck,
             'name': self.name,
             'img': self.img,
-            'query': self.query,
+            'api_endpoint': self.api_endpoint,
             #     'description': self.description,
             #     'upKWs': self.upKWs,
             #     'revKWs': self.revKWs,
