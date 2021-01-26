@@ -16,7 +16,7 @@ class Card(db.Model):
     # revMeaning = db.Column(db.Text, nullable=False)
 
     def to_dict(self):
-        return{
+        return {
             'id': self.id,
             'deck': self.deck,
             'name': self.name,

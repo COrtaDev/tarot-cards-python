@@ -7,6 +7,7 @@ from flask_migrate import Migrate
 
 from .models import db, Card
 # from .models import db, User
+from .api.card_routes import card_routes
 # from .api.user_routes import user_routes
 # from .api.auth_routes import auth_routes
 
@@ -30,9 +31,10 @@ app = Flask(__name__)
 app.cli.add_command(seed_commands)
 
 app.config.from_object(Config)
+app.register_blueprint(card_routes, url_prefix='/api/cards')
 # app.register_blueprint(user_routes, url_prefix='/api/users')
 # app.register_blueprint(auth_routes, url_prefix='/api/auth')
-# db.init_app(app)
+db.init_app(app)
 Migrate(app, db)
 
 # Application Security

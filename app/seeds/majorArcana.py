@@ -1,6 +1,6 @@
 import wikipedia
-from major import major
-from tarot_card import TarotCard
+from .major import major
+from .tarot_card import TarotCard
 
 
 # takes in an array of objects and adds

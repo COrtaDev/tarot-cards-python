@@ -9,10 +9,23 @@ import React, { useState, useEffect } from "react";
 // import { authenticate } from "./services/auth";
 
 function App() {
+  const [deck, setDeck] = useState(null);
   // const [authenticated, setAuthenticated] = useState(false);
-  // const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    (async () => {
+      const data = await fetch('/api/cards/major', {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      });
+      const cards = await data.json();
+      if (!cards.errors) {
+        setDeck(cards);
+      }
+      setLoaded(true)
+    })();
     // (async () => {
     //   const user = await authenticate();
     //   if (!user.errors) {
@@ -22,10 +35,10 @@ function App() {
     // })();
   }, []);
 
-  // if (!loaded) {
-  //   return null;
-  // }
-
+  if (!loaded) {
+    return null;
+  }
+  console.log(deck)
   return (
     <>
       <h1>My Home Page</h1>

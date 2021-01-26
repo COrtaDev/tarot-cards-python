@@ -1,4 +1,4 @@
-from app.models import db, Cards
+from app.models import db, Card
 from .majorArcana import major_arcana as cards
 
 
