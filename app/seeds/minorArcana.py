@@ -35,10 +35,10 @@ def getCardData():
 
 
 def makeName(suits, suit):
-    print(suits[0], suits[1])
+    # print(suits[0], suits[1])
     return [{'name': f"{s[1]} of {suit}", 'suit': suit.lower(), 'img': s[0],
              'api_endpoint': f"{s[1]}_of_{suit}"} for s in suits]
 
 
 minor_arcana = getCardData()
-print(minor_arcana)
+# print(minor_arcana)
