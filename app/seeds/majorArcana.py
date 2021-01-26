@@ -19,5 +19,5 @@ def getCardData(deck):
 cards = getCardData(major)
 # Now that we have and array of cards, we can make a
 # tarot card object for each one:
-major_arcana = [TarotCard(card['id'], card['name'], card['img'],
+major_arcana = [TarotCard(card['name'], 'trump', card['img'],
                           card['api_endpoint'], 'major') for card in cards]
