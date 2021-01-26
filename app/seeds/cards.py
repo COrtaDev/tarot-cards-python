@@ -22,3 +22,7 @@ def seed_minor():
                    for card in minor]
     db.session.add_all(tarot_cards)
     db.session.commit()
+
+
+def drop_all_cards():
+    db.session.drop_all()
