@@ -1,16 +1,10 @@
 from flask import Blueprint, jsonify
-from app.models import Card
+from app.models import db, Card
 
 card_routes = Blueprint('cards', __name__)
 
 
 @card_routes.route('/major')
-def major():
-    # db.session.query
-    print("Up here nigga!!!")
-    cards = Card.query.get()
-    # cards = session.query(Card).filter(Card.deck == 'major').all()
-    # cards = Card.query.filter(Card.deck == 'major')
+def get_major():
+    cards = Card.query.filter(Card.deck == 'major').all()
     return {'deck': [card.to_dict() for card in cards]}
-    # print("hello earth")
-    # return {"This is it!"}

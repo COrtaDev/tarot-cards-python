@@ -7,8 +7,8 @@ from .tarot_card import TarotCard
 #  a query property and and img url to each
 def getCardData(deck):
     for card in deck:
-        card['query'] = card['name'].replace(' ', '_') + '_(Tarot_card)'
-        urls = wikipedia.WikipediaPage(card['query']).images
+        card['api_endpoint'] = card['name'].replace(' ', '_') + '_(Tarot_card)'
+        urls = wikipedia.WikipediaPage(card['api_endpoint']).images
         for url in urls:
             if '/RWS' in url:
                 card['img'] = url
@@ -20,4 +20,4 @@ cards = getCardData(major)
 # Now that we have and array of cards, we can make a
 # tarot card object for each one:
 major_arcana = [TarotCard(card['id'], card['name'], card['img'],
-                          card['query'], 'major') for card in cards]
+                          card['api_endpoint'], 'major') for card in cards]

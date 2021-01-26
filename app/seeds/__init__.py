@@ -1,5 +1,4 @@
 from flask.cli import AppGroup
-from .users import seed_users, undo_users
 from .cards import seed_cards
 
 # Creates a seed group to hold our commands
@@ -13,11 +12,3 @@ seed_commands = AppGroup('seed')
 def seed():
     seed_cards()
     # Add other seed functions here
-
-# Creates the `flask seed undo` command
-
-
-# @seed_commands.command('undo')
-# def undo():
-#     undo_users()
-    # Add other undo functions here
