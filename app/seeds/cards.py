@@ -1,5 +1,6 @@
 from app.models import db, Card
 from .majorArcana import major_arcana as cards
+from .minorArcana import minor_arcana
 
 
 def seed_cards():

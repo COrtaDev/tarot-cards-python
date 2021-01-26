@@ -1,31 +1,42 @@
 import wikipedia
-from .minor import helper
-from .tarot_card import TarotCard
+# from .minor_helper import helper as names
+# from .tarot_card import TarotCard
+
+
+class TarotCard:
+    def __init__(self, name, suit, img, api_endpoint, deck):
+        self.name = name
+        self.suit = suit
+        self.img = img
+        self.api_endpoint = api_endpoint
+        self.deck = deck
+
+
+names = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+         "Nine", "Ten", "Page", "Knight", "Queen", "King", ]
 
 
 def getCardData():
     img_urls = wikipedia.WikipediaPage('Minor Arcana').images
-    wands_urls = [url for url in img_urls if url.rfind('Wands') > 0]
-    coins_urls = [url for url in img_urls if url.rfind('Pents') > 0]
-    cups_urls = [url for url in img_urls if url.rfind('Cups') > 0]
-    swords_urls = [url for url in img_urls if url.rfind('Swords') > 0]
-    # We would like to return a list full of tarot card objects in the end
-    # Right now, we have 4 lists of urls per suit.
-    # Next, we need to iterate over the helper list and make a name for
-    # each card for each suit
-    makeName(wands_urls, help, 'Wands')
-    return
+    suits = [makeName(
+            [url for url in img_urls if url.rfind(
+                'Wands') > 0], names, 'Wands'),
+             makeName([url for url in img_urls if url.rfind(
+                 'Pents') > 0], names, 'Coins'),
+             makeName([url for url in img_urls if url.rfind(
+                 'Cups') > 0], names, 'Cups'),
+             makeName([url for url in img_urls if url.rfind(
+                 'Swords') > 0], names, 'Swords'), ]
+    return [TarotCard(card['name'], card['suit'], card['img'],
+                      card['api_endpoint'], 'minor')
+            for suit in suits for card in suit]
 
 
-def makeName(suitArr, helper, suit):
-    for name in helper:
-        print(f"{name} of {suit}")
+def makeName(url_list, names, suit):
+    return [{'name': f"{name} of {suit}", 'suit': suit.lower(), 'img': url,
+             'api_endpoint': f"{name}_of_{suit}"} for name in names
+            for url in url_list]
 
-    return
 
-
-    # def makeCardFromSuit(suitArr, suit):
-    #     cards = [TarotCard()]
-    # for card in suitArr:
-    #     tarot_card = TarotCard
-getCardData()
+minor_arcana = getCardData()
+# print(minor_arcana)
