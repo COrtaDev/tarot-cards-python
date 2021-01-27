@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+// import '../styles/css/mystyles.css';
 
 const Deck = ({ props }) => {
     // console.log(props.cards);
@@ -8,8 +9,8 @@ const Deck = ({ props }) => {
     return (
         <>
             <section className={"section"}>
-                <div>
-                    <div className={"container"} style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                <div className={"colums"}>
+                    <div className={"column is-three-fifths is-offset-one-fifth"}>
                         {cards}
                     </div>
                 </div>
