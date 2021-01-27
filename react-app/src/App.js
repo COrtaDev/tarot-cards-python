@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
+import Deck from "./components/Deck";
 
 function App() {
-  const [deck, setDeck] = useState(null);
+  const [cards, setCards] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     (async () => {
-      const data = await fetch('/api/cards/major', {
-        headers: {
-          "Content-Type": "application/json",
-        }
-      });
+      const data = await fetch('/api/cards/all');
       const cards = await data.json();
       if (!cards.errors) {
-        setDeck(cards);
+        setCards(cards);
       }
       setLoaded(true)
     })();
@@ -22,10 +19,11 @@ function App() {
   if (!loaded) {
     return null;
   }
-  console.log(deck)
+  // console.log(cards)
   return (
     <>
       <h1>My Home Page</h1>
+      <Deck props={cards} />
     </>
   );
 }
