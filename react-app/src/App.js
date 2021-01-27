@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Deck from "./components/Deck";
+import Footer from "./components/Footer";
+import HeroBanner from "./components/HeroBanner";
 import './styles/css/mystyles.css';
 
 function App() {
@@ -23,10 +25,9 @@ function App() {
   // console.log(cards)
   return (
     <>
-      <section className={"section is-large"}>
-        {/* <h1>My Home Page</h1> */}
-        <Deck props={cards} />
-      </section>
+      <HeroBanner />
+      <Deck props={cards} />
+      <Footer />
     </>
   );
 }
