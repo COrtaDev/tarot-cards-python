@@ -5,8 +5,8 @@ const Card = ({ card }) => {
     return (
         <span >
             <div>
-                <p>{card.name}</p>
-                <img src={card.img} style={{ width: '200px' }} />
+                <h6>{card.name}</h6>
+                <img src={card.img} style={{ width: '200px' }} alt={""}/>
             </div>
         </span>
     )

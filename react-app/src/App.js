@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Deck from "./components/Deck";
+import './styles/css/mystyles.css';
 
 function App() {
   const [cards, setCards] = useState(null);
@@ -22,8 +23,10 @@ function App() {
   // console.log(cards)
   return (
     <>
-      <h1>My Home Page</h1>
-      <Deck props={cards} />
+      <section className={"section is-large"}>
+        {/* <h1>My Home Page</h1> */}
+        <Deck props={cards} />
+      </section>
     </>
   );
 }
