@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Deck from "./components/Deck";
+import Footer from "./components/Footer";
+import HeroBanner from "./components/HeroBanner";
 import './styles/css/mystyles.css';
 
 function App() {
@@ -23,28 +25,9 @@ function App() {
   // console.log(cards)
   return (
     <>
-      <section class="hero">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
-              Hero title
-      </h1>
-            <h2 class="subtitle">
-              Hero subtitle
-      </h2>
-          </div>
-        </div>
-      </section>
-      <section className={"section"}>
-        <div className={"container"}>
-          <Deck props={cards} />
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="content has-text-centered">
-
-        </div>
-      </footer>
+      <HeroBanner />
+      <Deck props={cards} />
+      <Footer />
     </>
   );
 }
