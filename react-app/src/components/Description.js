@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Description = ({ modalState, name, card }) => {
   const [description, setDescription] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  console.log(card.suit)
+  // console.log(card.suit)
   useEffect(() => {
     // console.log(modalState)
     // if (description) return
@@ -16,7 +16,7 @@ const Description = ({ modalState, name, card }) => {
       }
       setLoaded(true);
     })();
-  }, []);
+  }, [card.suit, modalState, name]);
 
   if (!loaded) return null;
   // console.log(description)

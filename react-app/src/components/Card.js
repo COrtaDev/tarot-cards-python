@@ -12,7 +12,7 @@ const Card = ({ card }) => {
         <>
             <DetailModal card={card} closeModal={toggleModal} modalState={modalState} />
             <div onClick={() => toggleModal()} style={{ margin: "0.5rem 0.5rem" }}>
-                <div style={{ width: "200px" }} className={"box box-radius"}>
+                <div style={{ width: "340px" }} className={"box box-radius"}>
                     <div className={"card"} >
                         <header className={"card-header"}>
                             <p className={"card-header-title is-centered"}>{card.name}</p>
