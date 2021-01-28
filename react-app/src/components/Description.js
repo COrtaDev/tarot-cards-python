@@ -21,7 +21,7 @@ const Description = ({ modalState, name, card }) => {
   if (!loaded) return null;
   // console.log(description)
   return (
-    <div style={{ color: 'black' }}>{description.description}</div>
+    <p className={"has-text-justified is-size-4-mobile is-size-3"} style={{ color: 'black' }}>{description.description}</p>
     // <p style={{ color: 'black' }}>{description.description}</p>
   )
 }
