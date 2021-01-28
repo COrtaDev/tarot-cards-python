@@ -22,7 +22,7 @@ function App() {
   if (!loaded) {
     return null;
   }
-  // console.log(cards)
+  console.log(cards)
   return (
     <>
       <HeroBanner />

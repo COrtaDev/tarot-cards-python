@@ -10,14 +10,11 @@ const Deck = ({ props }) => {
         <>
             <section className={"section"}>
                 <div style={{ display: "flex", justifyContent: "center" }} className={"colums"}>
-                    {/* <div className={"column is-three-fifths is-offset-one-fifth"}> */}
-                    {/* <div className={"column is-1"}></div> */}
                     <div className={"column is-four-fifths"}>
                         <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
                             {cards}
                         </div>
                     </div>
-                    {/* <div className={"column is-1"}></div> */}
                 </div>
             </section>
         </>
