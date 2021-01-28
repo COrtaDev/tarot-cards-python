@@ -19,10 +19,8 @@ function App() {
     })();
   }, []);
 
-  if (!loaded) {
-    return null;
-  }
-  // console.log(cards)
+  if (!loaded) return null;
+  console.log(cards)
   return (
     <>
       <HeroBanner />

@@ -9,9 +9,11 @@ const Deck = ({ props }) => {
     return (
         <>
             <section className={"section"}>
-                <div className={"colums"}>
-                    <div className={"column is-three-fifths is-offset-one-fifth"}>
-                        {cards}
+                <div style={{ display: "flex", justifyContent: "center" }} className={"colums"}>
+                    <div className={"column is-four-fifths"}>
+                        <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
+                            {cards}
+                        </div>
                     </div>
                 </div>
             </section>

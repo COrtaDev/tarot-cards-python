@@ -6,11 +6,12 @@
 
 // Set your brand colors
 $purple: #8A4D76;
-// $pink: #FA7C91;
+$leather: #31250f;
 $brown: #757763;
+$light-brown:#d0d1c6;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
-$black: black;
+$mystical-black: #05021b;
 $dimensions: 16 24 32 48 64 96 128 200 300 500;
 
 
@@ -24,10 +25,16 @@ $widescreen-enabled: true;
 $fullhd-enabled: true;
 
 // Update some of Bulma's component variables
-$body-background-color: $black;
+$body-background-color: $mystical-black;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$card-header-padding: 0em;
+$card-header-weight: 400;
+$card-background-color: $light-brown;
+$box-padding: 0.3rem;
+$box-background-color: $leather;
+
 
 // Import only what you need from Bulma
 @import "../../../node_modules/bulma/sass/utilities/_all.sass";

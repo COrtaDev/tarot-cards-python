@@ -2,15 +2,15 @@ import React from 'react';
 
 const HeroBanner = () => {
     return (
-        <section className={"hero"}>
-            <div className={"hero-body"}>
+        <section className={"hero is-small"}>
+            <div className={"hero-body "}>
                 <div className={"container"}>
                     <h1 className={"title"}>
-                        Hero title
-      </h1>
+                        Tarot Cards
+                    </h1>
                     <h2 className={"subtitle"}>
-                        Hero subtitle
-      </h2>
+                        Major Arcana and Minor Arcana
+                    </h2>
                 </div>
             </div>
         </section>
