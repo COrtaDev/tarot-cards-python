@@ -1,7 +1,7 @@
 from app.models import db, Card
 from .majorArcana import major_arcana as major
 from .minorArcana import minor_arcana as minor
-from .description import 
+# from .description import
 
 
 def seed_cards():

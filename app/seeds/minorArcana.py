@@ -1,19 +1,19 @@
 import wikipedia
-# from .minor_helper import helper as names
-# from .tarot_card import TarotCard
+from .minor_helper import helper as names
+from .tarot_card import TarotCard
 
 
-class TarotCard:
-    def __init__(self, name, suit, img, api_endpoint, deck):
-        self.name = name
-        self.suit = suit
-        self.img = img
-        self.api_endpoint = api_endpoint
-        self.deck = deck
+# class TarotCard:
+#     def __init__(self, name, suit, img, api_endpoint, deck):
+#         self.name = name
+#         self.suit = suit
+#         self.img = img
+#         self.api_endpoint = api_endpoint
+#         self.deck = deck
 
 
-names = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
-         "Nine", "Ten", "Page", "Knight", "Queen", "King", ]
+# names = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+#          "Nine", "Ten", "Page", "Knight", "Queen", "King", ]
 
 
 def getCardData():
@@ -41,4 +41,4 @@ def makeName(suits, suit):
 
 
 minor_arcana = getCardData()
-# print(minor_arcana)
+print(minor_arcana)

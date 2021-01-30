@@ -1,4 +1,11 @@
 from flask.cli import AppGroup
+
+# from .majorArcana import major_arcana
+# from .minorArcana import minor_arcana
+# from .major import major
+# from .minor_helper import helper
+# from .tarot_card import TarotCard
+
 from .cards import seed_cards, drop_all_cards
 
 # Creates a seed group to hold our commands
