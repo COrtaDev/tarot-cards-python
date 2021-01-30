@@ -18,7 +18,7 @@ names = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
 
 def getCardData():
     img_urls = wikipedia.WikipediaPage('Minor Arcana').images
-    wands = [url for url in img_urls if url.rfind('Wands') > 0]
+    # wands = [url for url in img_urls if url.rfind('Wands') > 0]
     suits = [
         makeName(
             list(zip([url for url in img_urls if url.rfind(
