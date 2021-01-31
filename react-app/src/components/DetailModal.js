@@ -12,16 +12,16 @@ const DetailModal = ({ closeModal, modalState, card }) => {
         <p className={"image is-full-height"}>
           <div className={"modal-card"}>
             <header className={"modal-card-head"}>
-              <p className={"modal-card-title"}>{card.name}</p>
+              <p className={"modal-card-title is-size-1"}>{card.name}</p>
               <button
-                className={"delete"} aria-label={"close"} onClick={closeModal}></button>
+                className={"delete is-large"} aria-label={"close"} onClick={closeModal}></button>
             </header>
             <section className={"modal-card-body"}>
               <div className={"container"}>
                 <div className={"columns is-mobile"}>
-                  <div className={"column is-one-third"}>
+                  <div className={"column is-fullwidth is-full-width-mobile"}>
                     <figure className={"image is-3by5"}>
-                      <img src={card.img} alt={card.name} />
+                      <img style={{ width: "300px" }} src={card.img} alt={card.name} />
                     </figure>
                   </div>
                   <div className={"column is-two-thirds"}>
@@ -34,7 +34,7 @@ const DetailModal = ({ closeModal, modalState, card }) => {
               <div className={"container"}>
                 <div className={"columns"} style={{ display: "flex", justifyContent: "center" }} >
                   <div className={"column is-half"} >
-                    <button className={"button is-fullwidth"} onClick={closeModal}>Back</button>
+                    <button className={"button is-large is-fullwidth"} onClick={closeModal}>Back</button>
                   </div>
                 </div>
               </div>
