@@ -41,4 +41,4 @@ def makeName(suits, suit):
 
 
 minor_arcana = getCardData()
-print(minor_arcana)
+# print(minor_arcana)
