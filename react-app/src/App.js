@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route } from 'react-router-dom';
 import Deck from "./components/Deck";
 import Footer from "./components/Footer";
 import HeroBanner from "./components/HeroBanner";
+import FlippableCard from "./components/card/FlippableCard";
 import './styles/css/mystyles.css';
 
 function App() {
@@ -20,12 +22,19 @@ function App() {
   }, []);
 
   if (!loaded) return null;
-  console.log(cards)
+  // console.log(cards)
   return (
     <>
-      <HeroBanner />
-      <Deck props={cards} />
-      <Footer />
+      <BrowserRouter>
+        <Route exact path={"/"}>
+          <HeroBanner />
+          <Deck props={cards} />
+          <Footer />
+        </Route>
+        <Route exact path={"/newcard"}>
+          <FlippableCard />
+        </Route>
+      </BrowserRouter>
     </>
   );
 }
