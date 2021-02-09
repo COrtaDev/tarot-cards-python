@@ -2114,3 +2114,5 @@ tarotCards = [
     "zodiac": "Aries, Saggitarius, Leo"
   }
 ]
+
+export default tarotCards;

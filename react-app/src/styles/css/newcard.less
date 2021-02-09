@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Rochester);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+///---- Config ------//
+@script:'Rochester', cursive !important;
+
+body{
+  background: url('http://kieranoconnorphotography.com/wp-content/uploads/2012/06/board-black-series-texture-background-wood-wallpaper-wood-texture-wallpapers-476..jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.singlecard {
+  width: 200px;
+  height: 335px;
+  position: relative;
+  margin: 75px auto 40px;
+  -webkit-perspective: 800px;
+     -moz-perspective: 800px;
+       -o-perspective: 800px;
+          perspective: 800px;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+       -moz-transition: -moz-transform 1s;
+         -o-transition: -o-transform 1s;
+            transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: right center;
+       -moz-transform-origin: right center;
+         -o-transform-origin: right center;
+            transform-origin: right center;
+      -webkit-box-shadow: 0 0 12px 10px rgba(0,0,0,.5);
+      box-shadow: 0 0 12px 10px rgba(0,0,0,.5);
+
+    figure {
+      cursor: pointer;
+      display: block;
+      height: 100%;
+      width: 100%;
+      line-height: 260px;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 140px;
+      position: absolute;
+      margin: 0;
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+    .front {
+      height: 335px;
+      background: #3D3D3D;
+      img{ width: 100%;}
+    }
+
+    .back {
+      background: #3D3D3D;
+      height: 335px;
+      font-size: 14px;
+      width: 100%;
+      padding: 5px 20px;
+      -webkit-transform: rotateY( 180deg );
+         -moz-transform: rotateY( 180deg );
+           -o-transform: rotateY( 180deg );
+              transform: rotateY( 180deg );
+
+      h3{
+        font: normal 24px/24px @script;
+      }
+      .description{
+        text-align: left;
+        color: #B4B4B4;
+        font: 12px/16px Arial, "Helvetica Neue", Helvetica, sans-serif;
+        em{ font-style: normal; color: #fff;}
+        .titlecr{ font-weight: bold; color: #2D9BD8;}
+
+      }
+    }//END back
+  }//END card
+  .card.flipped {
+  -webkit-transform: translateX( -100% ) rotateY( -180deg );
+     -moz-transform: translateX( -100% ) rotateY( -180deg );
+       -o-transform: translateX( -100% ) rotateY( -180deg );
+          transform: translateX( -100% ) rotateY( -180deg );
+  }
+}//END singlecard
