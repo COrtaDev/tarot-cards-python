@@ -5,9 +5,9 @@ class Card(db.Model):
     __tablename__ = 'cards'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, nullable=False, unique=True)
-    deck = db.Column(db.String, nullable=False)
-    suit = db.Column(db.String, nullable=False)
+    name = db.Column(db.Text, nullable=False, unique=True)
+    deck = db.Column(db.Text, nullable=False)
+    suit = db.Column(db.Text, nullable=False)
     value = db.Column(db.Integer, nullable=False)
     img = db.Column(db.String, nullable=False, unique=True)
     description = db.Column(db.Text, nullable=False)
@@ -29,9 +29,9 @@ class Card(db.Model):
     reversed_career_meaning = db.Column(db.Text, nullable=False)
     reversed_love_meaning = db.Column(db.Text, nullable=False)
     reversed_finances_meaning = db.Column(db.Text, nullable=False)
-    astrology = db.Column(db.String, nullable=True)
-    element = db.Column(db.String, nullable=True)
-    zodiac = db.Column(db.String, nullable=True)
+    astrology = db.Column(db.Text, nullable=True)
+    element = db.Column(db.Text, nullable=True)
+    zodiac = db.Column(db.Text, nullable=True)
 
     def to_dict(self):
         return {
