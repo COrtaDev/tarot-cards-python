@@ -6,7 +6,6 @@ import CardTiles from './CardTiles';
 // console.log(theHighPriestess);
 
 const CardModal = ({ closeModal, modalState }) => {
-  // const [modalState, setModalState] = useState(false);
   if (!modalState) return null;
 
   return (
