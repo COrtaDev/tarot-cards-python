@@ -14,14 +14,11 @@ const FlippableCard = () => {
 
   function flip(e) {
     e.preventDefault();
-    // console.log(modalState);
     if (modalShow) return;
     if (!cardState) {
       setCardState('flipped');
-      // setModalShow(true);
     } else {
       setCardState('');
-      // setModalShow(false);
     }
   };
 
