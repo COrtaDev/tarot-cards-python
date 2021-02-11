@@ -7,7 +7,7 @@ class Card(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False, unique=True)
     deck = db.Column(db.Text, nullable=False)
-    suit = db.Column(db.Text, nullable=False)
+    suit = db.Column(db.String, nullable=False)
     value = db.Column(db.Integer, nullable=False)
     img = db.Column(db.String, nullable=False, unique=True)
     description = db.Column(db.Text, nullable=False)

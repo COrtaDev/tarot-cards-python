@@ -15,7 +15,7 @@ def seed_deck():
     tarot_cards = [
         Card(name=data['name'],
              deck=data['deck'],
-             suit=['suit'],
+             suit=data['suit'],
              value=data['value'],
              img=data['img'],
              description=data['description'],
