@@ -33,6 +33,13 @@ beautifulsoup4 = "*"
 
 [dev-packages]
 psycopg2-binary = "==2.8.6"
+pycodestyle = "*"
+black = "*"
+autopep8 = "*"
+yapf = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
