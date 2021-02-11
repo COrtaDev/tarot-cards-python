@@ -1,5 +1,5 @@
 from app.models import db, Card
-from app.seedables import data as all_data
+from app.seedables import tarot_card_data
 # from .majorArcana import major_arcana as major
 # from .minorArcana import minor_arcana as minor
 
@@ -40,9 +40,9 @@ def seed_deck():
              astrology=data['astrology'],
              element=data['element'],
              zodiac=data['zodiac'],
-             )for data in all_data]
+             )for data in tarot_card_data]
     db.session.add_all(tarot_cards)
-    db.session.flush()
+    # db.session.flush()
     # def seed_major():
     #     tarot_cards = [Card(deck=card.deck, name=card.name, suit='trump',
     #                         img=card.img, api_endpoint=card.api_endpoint)
