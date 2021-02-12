@@ -6,26 +6,27 @@ import Description from './Description';
 const DetailModal = ({ closeModal, modalState, card }) => {
   if (!modalState) return null;
   return (
-    <div className={"modal is-active"}>
+    <div className={"modal is-active mx-4-fullhd-only"}>
       <div className={"modal-background"} onClick={closeModal}></div>
       <div className={"modal-content"}>
-        <p className={"image is-full-height"}>
+        <p className={"image is-fullheight-mobile"}>
           <div className={"modal-card"}>
             <header className={"modal-card-head"}>
               <p className={"modal-card-title is-size-1"}>{card.name}</p>
               <button
                 className={"delete is-large"} aria-label={"close"} onClick={closeModal}></button>
             </header>
-            <section className={"modal-card-body"}>
-              <div className={"container"}>
+            <section className={"modal-card-body is-clipped-fullhd is-clipped-widescreen-only is-clipped-desktop-only"}>
+              <div className={"container "}>
                 <div className={"columns is-mobile"}>
-                  <div className={"column is-fullwidth is-full-width-mobile"}>
-                    <figure className={"image is-3by5"}>
-                      <img style={{ width: "300px" }} src={card.img} alt={card.name} />
+                  <div className={"column is-fullwidth is-fullwidth-mobile"}>
+                    <figure className={"image is-3by5 "}>
+                      <img src={card.img} alt={card.name} />
                     </figure>
                   </div>
                   <div className={"column is-two-thirds"}>
-                    <Description modalState={modalState} name={card.name} card={card} />
+                    <p style={{ color: 'black' }} className={"has-text-justified is-size-6-desktop is-size-4-mobile is-size-3"}>{card.description}</p>
+                    {/* <Description modalState={modalState} name={card.name} card={card} /> */}
                   </div>
                 </div>
               </div>

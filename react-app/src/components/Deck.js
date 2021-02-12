@@ -2,9 +2,9 @@ import React from 'react';
 import Card from './Card';
 // import '../styles/css/mystyles.css';
 
-const Deck = ({ props }) => {
-    // console.log(props.cards);
-    const cards = props.cards.map(deck => deck.cards.map(card => <Card key={card.id} card={card} />));
+const Deck = ({ deck }) => {
+    console.log(deck);
+    const cards = deck.cards.map(card=> <Card key={card.id} card={card}/>)
 
     return (
         <>
