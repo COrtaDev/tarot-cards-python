@@ -28,7 +28,7 @@ function App() {
       <BrowserRouter>
         <Route exact path={"/"}>
           <HeroBanner />
-          <Deck props={cards} />
+          <Deck deck={cards} />
           <Footer />
         </Route>
         <Route exact path={"/newcard"}>
