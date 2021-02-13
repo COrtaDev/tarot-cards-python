@@ -66,3 +66,8 @@ def seed_deck():
 def undo_cards():
     db.session.execute('TRUNCATE cards;')
     db.session.commit()
+
+
+def drop_cards():
+    Card.__table__.drop()
+    db.session.commit()

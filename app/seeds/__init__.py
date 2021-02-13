@@ -1,10 +1,10 @@
 from flask.cli import AppGroup
-from .cards import seed_cards, undo_cards
+from .cards import seed_cards, undo_cards, drop_cards
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
 seed_commands = AppGroup('seed')
-
+# db_commands = AppGroup('drop')
 # Creates the `flask seed all` command
 
 
@@ -19,3 +19,8 @@ def seed():
 def undo():
     undo_cards()
     # Add other undo functions here
+
+
+@seed_commands.command('drop')
+def drop():
+    drop()
