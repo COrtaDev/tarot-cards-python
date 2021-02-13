@@ -21,6 +21,6 @@ def undo():
     # Add other undo functions here
 
 
-@seed_commands.command('all')
+@seed_commands.command('drop')
 def drop():
     drop()
