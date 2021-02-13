@@ -1,7 +1,4 @@
-import React from 'react';
-import Description from './Description';
-// import Modal from 'react-bootstrap/Modal';
-
+import React from "react";
 
 const DetailModal = ({ closeModal, modalState, card }) => {
   if (!modalState) return null;
@@ -14,9 +11,16 @@ const DetailModal = ({ closeModal, modalState, card }) => {
             <header className={"modal-card-head"}>
               <p className={"modal-card-title is-size-1"}>{card.name}</p>
               <button
-                className={"delete is-large"} aria-label={"close"} onClick={closeModal}></button>
+                className={"delete is-large"}
+                aria-label={"close"}
+                onClick={closeModal}
+              ></button>
             </header>
-            <section className={"modal-card-body is-clipped-fullhd is-clipped-widescreen-only is-clipped-desktop-only"}>
+            <section
+              className={
+                "modal-card-body is-clipped-fullhd is-clipped-widescreen is-clipped-desktop"
+              }
+            >
               <div className={"container "}>
                 <div className={"columns is-mobile"}>
                   <div className={"column is-fullwidth is-fullwidth-mobile"}>
@@ -25,17 +29,31 @@ const DetailModal = ({ closeModal, modalState, card }) => {
                     </figure>
                   </div>
                   <div className={"column is-two-thirds"}>
-                    <p style={{ color: 'black' }} className={"has-text-justified is-size-6-desktop is-size-4-mobile is-size-3"}>{card.description}</p>
-                    {/* <Description modalState={modalState} name={card.name} card={card} /> */}
+                    <p
+                      style={{ color: "black" }}
+                      className={
+                        "has-text-justified is-size-6-desktop is-size-4-mobile is-size-3"
+                      }
+                    >
+                      {card.description}
+                    </p>
                   </div>
                 </div>
               </div>
             </section>
             <footer className={"modal-card-foot"}>
               <div className={"container"}>
-                <div className={"columns"} style={{ display: "flex", justifyContent: "center" }} >
-                  <div className={"column is-half"} >
-                    <button className={"button is-large is-fullwidth"} onClick={closeModal}>Back</button>
+                <div
+                  className={"columns"}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <div className={"column is-half"}>
+                    <button
+                      className={"button is-large is-fullwidth"}
+                      onClick={closeModal}
+                    >
+                      Back
+                    </button>
                   </div>
                 </div>
               </div>
@@ -45,6 +63,6 @@ const DetailModal = ({ closeModal, modalState, card }) => {
       </div>
     </div>
   );
-}
+};
 
 export default DetailModal;
